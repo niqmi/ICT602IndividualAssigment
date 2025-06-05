@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/gradient_background">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About This App"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_light"
+        android:gravity="center"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="sans-serif-condensed"/>
+
+    <TextView
+        android:id="@+id/aboutTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/text_light"
+        android:fontFamily="sans-serif"
+        android:lineSpacingExtra="4dp"
+        android:background="@drawable/rounded_card_background_translucent"
+        android:padding="20dp"/>
+
+</LinearLayout>

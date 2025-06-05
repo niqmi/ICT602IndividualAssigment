@@ -1,0 +1,171 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/gradient_background"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Electric Bill Calculator"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_light"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/unitInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            app:layout_constraintTop_toBottomOf="@id/titleTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:boxStrokeColor="@color/colorSecondary"
+            app:hintTextColor="@color/colorSecondary"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/unitEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Electricity Unit Used (kWh)"
+                android:inputType="numberDecimal"
+                android:textColor="@color/text_primary_dark"
+                android:background="@color/card_light_background"
+                android:padding="12dp"
+                android:textColorHint="@color/text_secondary_dark"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/monthLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Month:"
+            android:textSize="18sp"
+            android:textColor="@color/text_light"
+            app:layout_constraintTop_toBottomOf="@id/unitInputLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="24dp"/>
+
+        <Spinner
+            android:id="@+id/monthSpinner"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/monthLabelTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/spinner_background"
+            android:spinnerMode="dropdown"
+            android:popupBackground="@color/card_light_background"
+            tools:entries="@array/months_array"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/rebateInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/monthSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:boxStrokeColor="@color/colorSecondary"
+            app:hintTextColor="@color/colorSecondary"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/rebateEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Rebate Percentage (0-5%)"
+                android:inputType="numberDecimal"
+                android:textColor="@color/text_primary_dark"
+                android:background="@color/card_light_background"
+                android:padding="12dp"
+                android:textColorHint="@color/text_secondary_dark"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/calculateButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Calculate Bill"
+            android:textSize="18sp"
+            android:textColor="@color/colorOnSecondary"
+            android:backgroundTint="@color/colorSecondary"
+            app:layout_constraintTop_toBottomOf="@id/rebateInputLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp"
+            android:padding="14dp"
+            android:elevation="8dp"/>
+
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/rounded_card_background"
+            android:padding="20dp"
+            android:text="Results will be displayed here."
+            android:textSize="18sp"
+            android:textColor="@color/text_primary_dark"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/calculateButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:elevation="4dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/resultTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/historyButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="View History"
+                android:textSize="16sp"
+                android:textColor="@color/colorOnPrimary"
+                android:backgroundTint="@color/colorOnButton"
+                android:layout_marginEnd="12dp"
+                android:padding="12dp"
+                android:elevation="8dp"/>
+
+            <Button
+                android:id="@+id/aboutButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="About App"
+                android:textSize="16sp"
+                android:textColor="@color/colorOnPrimary"
+                android:backgroundTint="@color/colorOnButton"
+                android:layout_marginStart="12dp"
+                android:padding="12dp"
+                android:elevation="8dp"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

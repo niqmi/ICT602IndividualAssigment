@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Core Application Colors -->
+    <!-- Primary Blue: Professional, trustworthy, and calm -->
+    <color name="colorPrimary">#2196F3</color> <!-- A vibrant, medium blue -->
+    <color name="colorPrimaryVariant">#1976D2</color> <!-- Darker shade for status bar/accents -->
+    <color name="colorOnButton">#FFC107</color>
+    <color name="colorBlack">@color/colorOnSurface</color>
+    <color name="colorOnPrimary">#FFFFFF</color> <!-- Text color on primary background -->
+
+    <!-- Secondary Accent Green: Suggests efficiency, growth, positive results -->
+    <color name="colorSecondary">#4CAF50</color> <!-- A fresh, medium green -->
+    <color name="colorSecondaryVariant">#388E3C</color> <!-- Darker green for accents -->
+    <color name="colorOnSecondary">#FFFFFF</color> <!-- Text color on secondary background -->
+
+    <!-- Backgrounds and Surfaces -->
+    <color name="colorBackground">#F5F5F5</color> <!-- Soft, light grey background -->
+    <color name="colorOnBackground">#212121</color> <!-- Dark text on light background -->
+    <color name="colorSurface">#FFFFFF</color> <!-- Card/input field background -->
+    <color name="colorOnSurface">#212121</color> <!-- Text on card/input field -->
+    <color name="colorError">#D32F2F</color> <!-- Standard red for error messages -->
+    <color name="colorOnError">#FFFFFF</color> <!-- Text color on error background -->
+
+    <!-- Specific UI Element Colors -->
+    <!-- Gradient Background for Main Screen (if desired) -->
+    <color name="main_gradient_start">#64B5F6</color> <!-- Lighter blue -->
+    <color name="main_gradient_end">#2196F3</color>   <!-- Matches primary -->
+
+    <!-- Text Colors -->
+    <color name="text_primary_dark">#212121</color> <!-- Dark text for most content -->
+    <color name="text_secondary_dark">#757575</color> <!-- Slightly lighter dark text for hints, labels -->
+    <color name="text_light">#FFFFFF</color> <!-- Light text for dark backgrounds -->
+
+    <!-- Card/Result Box Backgrounds -->
+    <color name="card_light_background">#FFFFFF</color> <!-- White for cards/containers -->
+    <color name="result_box_background">#E3F2FD</color> <!-- Very light blue for result display -->
+
+</resources>
