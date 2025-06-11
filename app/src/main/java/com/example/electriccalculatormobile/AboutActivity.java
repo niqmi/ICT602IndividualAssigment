@@ -23,7 +23,7 @@ public class AboutActivity extends AppCompatActivity {
                 "<p>Course Code: ICT602</p>" +
                 "<p>Course Name: Mobile Technology And Developemnt</p>" +
                 "<p>Copyright &copy; 2025 Aniq. All rights reserved.</p>" +
-                "<p>Application Website: <a href=\"https://github.com/yourusername/yourrepository\">" +
+                "<p>Application Website: <a href=\"https://github.com/niqmi/ICT602IndividualAssigment\">" +
                 "GitHub Repository</a></p>";
         // Set the HTML formatted text to the TextView
         aboutTextView.setText(Html.fromHtml(aboutText, Html.FROM_HTML_MODE_COMPACT));
